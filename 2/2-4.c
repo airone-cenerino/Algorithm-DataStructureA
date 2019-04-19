@@ -24,6 +24,7 @@ int main(int argc, char const *argv[])
             newStr[i] = num%10 + '0';
             kuriagari = num/10;
         }
+
         if(kuriagari!=0)
             newStr[i] = kuriagari + '0';
 
