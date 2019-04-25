@@ -10,22 +10,27 @@ int main(int argc, char const *argv[])
     unsigned long long ans = 0;
     scanf("%llu", &n);
 
-    unsigned long long nSquare = n*n;
 
     for(i=0;i<n;i++){
-        unsigned long long tmp = nSquare-i*i;
-        ans += sqrtl(tmp);
-        printf("i=%llu, ans=%llu\n", i, ans);
+        // unsigned long long tmp = sqrtl(n*n -i*i);
+        // ans += tmp;
+        ans += (unsigned long long)sqrtl(n*n -i*i);
     }
+
+    int a = 1;
+    double b = 0.5;
+
+    a +=b;
+    int c = a+b;
+
+    printf("%d\n", a);
+    printf("%d\n", c);
+
+
     ans *= 4;
     ans++;
 
     printf("%llu:%.15f\n", n, (double)ans/n/n);
-
-    // long double finalanswer = ans/n;
-    // printf("%d:%.15Lf\n", n, finalanswer);
-    // finalanswer /= (double)n;
-    // printf("%d:%.15Lf\n", n, finalanswer);
 
     return 0;
 }
