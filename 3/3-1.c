@@ -7,12 +7,14 @@ int main(int argc, char const *argv[])
     char str[256] = {};
 
     while(gets(str)!=NULL){
-        char *ch;
+        char *tmp;
         char errmsg[256];
+        char name;
 
         strcpy(errmsg, str);
 
-        ch = strtok(str, " ");
+        tmp = strtok(str, " ");
+        name = *tmp;
         if(ch == 0){
             fprintf(stderr, "\n");
             continue;
