@@ -19,10 +19,14 @@ int main(int argc, char const *argv[])
 
         if(amari == 0)
             break;
-        
+
         for(j=0;j<i;j++){
             if(amariArr[j]==amari){
-                flg = 1;
+                flg = 1;    // 循環小数のフラグ
+                if(syouArr[j]==syouArr[i]){
+                    i--;
+                    j--;
+                }
                 break;
             }
         }
@@ -31,6 +35,7 @@ int main(int argc, char const *argv[])
     }
 
     printf("0.");
+
     for(k=0;k<=i;k++){
         if(k==j+1 && flg)
             printf("'");
@@ -38,5 +43,6 @@ int main(int argc, char const *argv[])
     }
 
     printf("\n");
+
     return 0;
 }
