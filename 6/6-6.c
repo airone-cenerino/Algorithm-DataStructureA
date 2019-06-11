@@ -9,8 +9,6 @@ int main(int argc, char const *argv[])
     int end[100];
     int distance[100];
     int cost[100];
-    int currentLookingPoint[100];
-    int currentLookingPointNum = 1;
     scanf("%d", &n);
     
 
@@ -25,11 +23,13 @@ int main(int argc, char const *argv[])
         i++;
     }
 
+    int currentLookingPoint[100];
+    int currentLookingPointNum = 1;
     currentLookingPoint[0] = 0
     currentLookingPointNum = 1;
     
     while(1){
-
+        currentLookingPoint
     }
     
     return 0;
