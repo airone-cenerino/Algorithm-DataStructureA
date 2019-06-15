@@ -2,6 +2,9 @@
 # include <string.h>
 # include <stdlib.h>
 
+
+// ベルマンフォード
+
 int main(int argc, char const *argv[])
 {
     int n, i=0, ans=0;
