@@ -8,6 +8,7 @@ int main(int argc, char const *argv[])
     char str[100][1100];
     int ans = 0;
 
+    // 入力受け取り
     scanf("%d", &n);
     for(i=0;i<n;i++){
         scanf("%s", &str[i]);
@@ -23,10 +24,10 @@ int main(int argc, char const *argv[])
             }
 
             // dp初期化
-            for(i=0;i<strlen(str[strone])+1;i++){
+            for(i=0;i<strlen(str[strtwo])+1;i++){
                 dp[i][0] = i;
             }
-            for(i=0;i<strlen(str[strtwo])+1;i++){
+            for(i=0;i<strlen(str[strone])+1;i++){
                 dp[0][i] = i;
             }
 
@@ -45,10 +46,8 @@ int main(int argc, char const *argv[])
                     dp[i][j] = min;
                 }
             }
-
-            if(dp[strlen(str[strtwo])][strlen(str[strone])] <= 10){
+            if(dp[strlen(str[strtwo])][strlen(str[strone])] < 10){
                 ans++;
-                printf("%d\n", ans);
             }
         }
     }
