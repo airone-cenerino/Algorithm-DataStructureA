@@ -72,6 +72,11 @@ int main(int argc, char const *argv[])
     }
     printBars(bars, n);
     move(n, 0, 1, 2, bars, n);
+    
+    for(i=0;i<3;i++){
+        free(bars[i]);
+    }
+    free(bars);
 
     return 0;
 }
